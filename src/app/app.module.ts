@@ -11,14 +11,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { QueryParamModule } from '@ngqp/core';
 import { LoginComponent } from './login/login.component';
-import { FilterPipe } from './filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    LoginComponent,
-    FilterPipe
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +25,7 @@ import { FilterPipe } from './filter.pipe';
     FormsModule,
     HttpClientModule,
     QueryParamModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

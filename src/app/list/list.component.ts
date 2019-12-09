@@ -16,6 +16,7 @@ export class ListComponent implements OnInit {
   letterResults: Object;
   results: string;
   clicked: boolean = false;
+  searchText;
   
   constructor(private _http: HttpService) { }
 
@@ -29,7 +30,7 @@ export class ListComponent implements OnInit {
   }
 
   sendResults(results) {
-    this._http.getResults(results).subscribe(data => {
+    this._http.getResults(results).subscribe((data) => {
       this.letterResults = data;
       console.log(this.letterResults);
     });

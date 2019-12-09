@@ -11,7 +11,7 @@
 <h1>Results</h1>
 
 <ul *ngIf="letters">
-    <li *ngFor="let letter of letterResults | filter: searchText">
+    <li *ngFor="let letter of letterResults | filter:searchText">
         <p class="letters">{{letter}}</p>
     </li>
 </ul>
