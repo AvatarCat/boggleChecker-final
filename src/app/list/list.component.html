@@ -1,0 +1,13 @@
+<!-- API Link: https://codebox.net/pages/boggle-game-solver-and-web-service -->
+
+<p>Enter the 16 letters on the boggle board. <br> Enter Q for QU.</p>
+<input #letters placeholder="Enter letters">
+<button (click)="onClickMe(letters.value)">Enter</button>
+
+<h1>Results</h1>
+
+<ul *ngIf="letters">
+    <li *ngFor="let letter of letterResults">
+        <p class="letters">{{letter}}</p>
+    </li>
+</ul>
