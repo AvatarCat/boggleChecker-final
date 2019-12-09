@@ -4,10 +4,14 @@
 <input #letters placeholder="Enter letters">
 <button (click)="onClickMe(letters.value)">Enter</button>
 
+<div class="md-form mt-0">
+    <input type="search" [(ngModel)]="searchText" placeholder="Search results">
+</div>
+
 <h1>Results</h1>
 
 <ul *ngIf="letters">
-    <li *ngFor="let letter of letterResults">
+    <li *ngFor="let letter of letterResults | filter: searchText">
         <p class="letters">{{letter}}</p>
     </li>
 </ul>

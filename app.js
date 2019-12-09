@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose');
 const User = require('./model/user');
 
-const url = process.env.MONGODB_ATLAS_URL;
+const url = 'mongodb://localhost/Boggle';
  
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended : false}))
